@@ -1,6 +1,10 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import BootstrapClient from "./components/BootstrapClient";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,8 +28,83 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
+        <nav className="container-fluid bg-dark py-2 borderButton">
+          <div className="row d-flex px-3 align-items-center">
+            <ul className="col d-flex gap-3 list-unstyled">
+              <li>
+                <Link className="text-decoration-none colorWhite" href="/">
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-decoration-none colorWhite"
+                  href="eventos"
+                >
+                  EVENT
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-decoration-none colorWhite"
+                  href="lugares"
+                >
+                  LUGARES
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-decoration-none colorWhite"
+                  href="noticias"
+                >
+                  NEWS
+                </Link>
+              </li>
+            </ul>
+            <article className="col">
+              <Link className="text-decoration-none" href="/">
+                <img
+                  src="/img/map logo.png"
+                  alt="logo"
+                  style={{ height: "59.75px" }}
+                />
+              </Link>
+            </article>
+          </div>
+        </nav>
+        <BootstrapClient />
         {children}
+        <footer
+          className="container-fluid bg-dark d-flex flex-column align-items-center"
+          style={{ height: "200px" }}
+        >
+          <div className="redesSociales d-flex flex-column align-items-center my-3 gap-3">
+            <a
+              className="text-white gap-3 text-decoration-none"
+              target="_blank"
+              href="https://www.instagram.com/Palometa_"
+            >
+              Creador <i className="bi bi-instagram"></i>
+            </a>
+            <a
+              className="text-white"
+              target="_blank"
+              href="https://www.instagram.com/republicadominicanadr/"
+            >
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a
+              className="text-white"
+              target="_blank"
+              href="https://x.com/repdominicanadr"
+            >
+              <i className="bi bi-twitter"></i>
+            </a>
+          </div>
+
+          <p className="text-white">@copiright derechos reselvados</p>
+        </footer>
       </body>
     </html>
   );

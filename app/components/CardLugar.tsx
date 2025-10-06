@@ -1,26 +1,14 @@
 import { ReactNode } from "react";
 
 type Props = {
-  children: ReactNode;
-};
-
-export function Categoria(props: Props) {
-  return (
-    <section className="container bg-body-dark my-5">
-      <div className="row gap-3">{props.children}</div>
-    </section>
-  );
-}
-
-type PropsCard = {
-  titulo?: string;
+  image: string;
+  name: string;
   text?: string;
-  href?: string;
-  image?: string;
+  lugar?: string;
   children?: ReactNode;
 };
 
-export function CardCategoria(props: PropsCard) {
+export function CardLugar(props: Props) {
   return (
     <div className="col d-flex justify-content-center">
       <article
@@ -34,11 +22,14 @@ export function CardCategoria(props: PropsCard) {
           style={{
             borderTopRightRadius: "5px",
             borderTopLeftRadius: "5px",
+            width: "100%",
+            height: "200px",
           }}
         />
 
         <div className="card-body d-flex flex-column ">
-          <h2 className="card-title">{props.titulo}</h2>
+          <h2 className="card-title ">{props.name}</h2>
+          <h3 className="card-text fs-5">{props.lugar}</h3>
           <p className="card-text">{props.text}</p>
           {props.children}
         </div>

@@ -3,14 +3,14 @@ export function Info() {
     <section>
       <article className="container my-5">
         <div className="row border">
-          <div className="col-5 p-0">
+          <div className="col-12 col-md-5 p-0">
             <img
               src="./img/catedral primada.png"
               className="h-100 object-fit-cover w-100"
               alt=""
             />
           </div>
-          <div className="col-7 d-flex flex-column justify-content-center">
+          <div className="content-info col-12 col-md-7 d-flex flex-column justify-content-center">
             <h2>Catedral Primada De America</h2>
             <p>
               es la más antigua de América, construida por mandato del papa

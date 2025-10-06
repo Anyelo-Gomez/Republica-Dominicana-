@@ -5,6 +5,9 @@ import "./globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import BootstrapClient from "./components/BootstrapClient";
+import LinkClient from "./components/LinkClient";
+import ThemeProviderClient from "./provaider/ThemeProvider Client";
+import { SwitchClient } from "./components/SwitchClientt";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,82 +32,70 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav className="container-fluid bg-dark py-2 borderButton">
-          <div className="row d-flex px-3 align-items-center">
-            <ul className="col d-flex gap-3 list-unstyled">
-              <li>
-                <Link className="text-decoration-none colorWhite" href="/">
-                  HOME
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-decoration-none colorWhite"
-                  href="eventos"
-                >
-                  EVENT
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-decoration-none colorWhite"
-                  href="lugares"
-                >
-                  LUGARES
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-decoration-none colorWhite"
-                  href="noticias"
-                >
-                  NEWS
-                </Link>
-              </li>
-            </ul>
-            <article className="col">
-              <Link className="text-decoration-none" href="/">
-                <img
-                  src="/img/map logo.png"
-                  alt="logo"
-                  style={{ height: "59.75px" }}
-                />
-              </Link>
-            </article>
-          </div>
-        </nav>
-        <BootstrapClient />
-        {children}
-        <footer
-          className="container-fluid bg-dark d-flex flex-column align-items-center"
-          style={{ height: "200px" }}
-        >
-          <div className="redesSociales d-flex flex-column align-items-center my-3 gap-3">
-            <a
-              className="text-white gap-3 text-decoration-none"
-              target="_blank"
-              href="https://www.instagram.com/Palometa_"
-            >
-              Creador <i className="bi bi-instagram"></i>
-            </a>
-            <a
-              className="text-white"
-              target="_blank"
-              href="https://www.instagram.com/republicadominicanadr/"
-            >
-              <i className="bi bi-instagram"></i>
-            </a>
-            <a
-              className="text-white"
-              target="_blank"
-              href="https://x.com/repdominicanadr"
-            >
-              <i className="bi bi-twitter"></i>
-            </a>
-          </div>
+        <ThemeProviderClient>
+          <nav className="container-fluid py-2 borderButton">
+            <div className="row d-flex px-3 align-items-center">
+              <ul className="col d-flex gap-3 list-unstyled">
+                <li>
+                  <LinkClient route="/" text="HOME"></LinkClient>
+                </li>
+                <li>
+                  <LinkClient route={"/eventos"} text="EVENT"></LinkClient>
+                </li>
+                <li>
+                  <LinkClient route={"/lugares"} text="LUGARES"></LinkClient>
+                </li>
+                <li>
+                  <LinkClient route={"/noticias"} text="NEWS"></LinkClient>
+                </li>
+              </ul>
+              <article className="col SpaceBetween align-items-center">
+                <div>
+                  <Link className="text-decoration-none" href="/">
+                    <img
+                      src="/img/map logo.png"
+                      alt="logo"
+                      style={{ height: "59.75px" }}
+                    />
+                  </Link>
+                </div>
+                <SwitchClient />
+              </article>
+            </div>
+          </nav>
+          <BootstrapClient />
+          {children}
+          <footer
+            className="container-fluid d-flex flex-column align-items-center"
+            style={{ height: "200px" }}
+          >
+            <div className="redesSociales d-flex flex-column align-items-center my-3 gap-3">
+              <a
+                className="text-white gap-3 text-decoration-none"
+                target="_blank"
+                href="https://www.instagram.com/Palometa_"
+              >
+                Creador <i className="bi bi-instagram"></i>
+              </a>
+              <a
+                className="text-white"
+                target="_blank"
+                href="https://www.instagram.com/republicadominicanadr/"
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a
+                className="text-white"
+                target="_blank"
+                href="https://x.com/repdominicanadr"
+              >
+                <i className="bi bi-twitter"></i>
+              </a>
+            </div>
 
-          <p className="text-white">@copiright derechos reselvados</p>
-        </footer>
+            <p className="text-white">@copiright derechos reselvados</p>
+          </footer>
+        </ThemeProviderClient>
       </body>
     </html>
   );

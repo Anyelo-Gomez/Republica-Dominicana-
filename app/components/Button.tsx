@@ -1,7 +1,11 @@
+"use client";
+
 type Props = {
   name?: string;
   className?: string;
   href?: string;
+  OnClick?: () => void;
+  id?: number;
 };
 
 export function Button(props: Props) {
@@ -11,6 +15,7 @@ export function Button(props: Props) {
       role="button"
       href={props.href}
       style={{ width: "auto" }}
+      onClick={props.OnClick}
     >
       {props.name}
     </a>

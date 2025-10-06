@@ -1,0 +1,68 @@
+{
+  "lugares": [
+    {
+      "id": 0,
+      "image": "bahia de las aguilas",
+      "name": "Bahia de las aguilas",
+      "lugar": "Pedernales",
+      "text": "Playa en República Dominicana",
+      "tipo": "playa"
+    },
+    {
+      "id": 1,
+      "image": "boca chica",
+      "name": "Boca chica",
+      "lugar": "Santo domingo",
+      "text": "Playa en República Dominicana",
+      "tipo": "playa"
+    },
+    {
+      "id": 2,
+      "image": "frico landia",
+      "name": "Frico landia",
+      "lugar": "Puerto plata",
+      "text": "Playa en República Dominicana",
+      "tipo": "playa"
+    },
+    {
+      "id": 3,
+      "image": "juan dolio",
+      "name": "Juan dolio",
+      "lugar": "Juan dolio",
+      "text": "Playa en República Dominicana",
+      "tipo": "playa"
+    },
+    {
+      "id": 4,
+      "image": "punta cana",
+      "name": "Punta cana",
+      "lugar": "Punta cana",
+      "text": "Playa en República Dominicana",
+      "tipo": "playa"
+    },
+    {
+      "id": 5,
+      "image": "rio fula",
+      "name": "Fula",
+      "lugar": "Punta cana",
+      "text": "Rio en República Dominicana",
+      "tipo": "rio"
+    },
+    {
+      "id": 6,
+      "image": "rio partido",
+      "name": "Rio partido",
+      "lugar": "Salcedo",
+      "text": "Rio en República Dominicana",
+      "tipo": "rio"
+    },
+    {
+      "id": 7,
+      "image": "salto socoa",
+      "name": "Salto socoa",
+      "lugar": "Monte Plata",
+      "text": "Rio en República Dominicana",
+      "tipo": "rio"
+    }
+  ]
+}

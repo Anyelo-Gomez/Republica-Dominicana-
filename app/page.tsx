@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Portada } from "./components/portada";
-import { CardColumn, Categoria } from "./components/categorias";
+import { CardCategoria, Categoria } from "./components/categorias";
 import { Info } from "./components/Informacion";
 import { Button } from "./components/Button";
 
@@ -89,27 +89,27 @@ export default function Home() {
       {/* <Portada className="colorAqua" text="loren" titulo="Punta Cana" /> */}
 
       <Categoria>
-        <CardColumn
+        <CardCategoria
           image={"/img/portada news.png"}
           titulo="NOTICIAS"
           text="Enterate de todo lo que acontese en republica dominicana"
         >
           <Button name="ver mas" href="noticias" />
-        </CardColumn>
-        <CardColumn
+        </CardCategoria>
+        <CardCategoria
           image={"/img/portada lugares.png"}
           titulo="LUGARES"
           text="Disfrutas de los paraisos que ofrese la republicia dominicana"
         >
           <Button name="ver mas" href="lugares" />
-        </CardColumn>
-        <CardColumn
+        </CardCategoria>
+        <CardCategoria
           image={"/img/evento portada.png"}
           titulo="EVENTOS"
           text="Disfrutas de los eventos que ofrese la republicia dominicana"
         >
           <Button name="ver mas" href="eventos" />
-        </CardColumn>
+        </CardCategoria>
       </Categoria>
       <Info />
     </main>

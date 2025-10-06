@@ -32,3 +32,41 @@
   max-height: 300px;
   object-fit: cover;
 }
+
+.LinkSelect {
+  font-weight: bold;
+  transform: scale(1.5);
+}
+
+.PositionStatic {
+  position: fixed;
+  z-index: 10000;
+}
+
+.SpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+html.dark body {
+  background-color: #212529;
+}
+
+html.dark .content-info,
+html.dark .card,
+html.dark footer,
+html.dark .lugarDeatial,
+html.dark nav {
+  background-color: #3f3f3f;
+  color: white;
+}
+
+html.light footer,
+html.light nav {
+  background-color: #212529;
+}

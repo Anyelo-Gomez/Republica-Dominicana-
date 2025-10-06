@@ -52,7 +52,7 @@ export default async function Lugares({
       <NavSearch></NavSearch>
 
       <Categoria>
-        <h2>{`Lugares (${products.length})`}</h2>
+        <h2 className="cantLugares">{`Lugares (${products.length})`}</h2>
 
         {lugares()}
       </Categoria>

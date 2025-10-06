@@ -7,6 +7,7 @@ import BootstrapClient from "./components/BootstrapClient";
 import LinkClient from "./components/LinkClient";
 import ThemeProviderClient from "./provaider/ThemeProvider Client";
 import { SwitchClient } from "./components/SwitchClientt";
+import { ButtonToggle } from "./components/ButtonToggle";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,22 +23,30 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProviderClient>
-          <nav className="container-fluid py-2 borderButton">
-            <div className="row d-flex px-3 align-items-center">
-              <ul className="col d-flex gap-3 list-unstyled">
-                <li>
-                  <LinkClient route="/" text="HOME"></LinkClient>
-                </li>
-                <li>
-                  <LinkClient route={"/eventos"} text="EVENT"></LinkClient>
-                </li>
-                <li>
-                  <LinkClient route={"/lugares"} text="LUGARES"></LinkClient>
-                </li>
-                <li>
-                  <LinkClient route={"/noticias"} text="NEWS"></LinkClient>
-                </li>
-              </ul>
+          <header className="header container-fluid py-2 ">
+            <div className="row px-3 py-0">
+              <nav className="col navbar  navbar-expand-md">
+                <ButtonToggle />
+                <div className="collapse navbar-collapse pt-4" id="navbarNav">
+                  <ul className="navbar-nav d-flex gap-3 list-unstyled">
+                    <li className="nav-item">
+                      <LinkClient route="/" text="HOME"></LinkClient>
+                    </li>
+                    <li className="nav-item">
+                      <LinkClient route={"/eventos"} text="EVENT"></LinkClient>
+                    </li>
+                    <li className="nav-item">
+                      <LinkClient
+                        route={"/lugares"}
+                        text="LUGARES"
+                      ></LinkClient>
+                    </li>
+                    <li className="nav-item">
+                      <LinkClient route={"/noticias"} text="NEWS"></LinkClient>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
               <article className="col SpaceBetween align-items-center">
                 <div>
                   <Link className="text-decoration-none" href="/">
@@ -51,7 +60,8 @@ export default function RootLayout({
                 <SwitchClient />
               </article>
             </div>
-          </nav>
+          </header>
+
           <BootstrapClient />
           {children}
           <footer

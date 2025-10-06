@@ -61,8 +61,8 @@ html.dark .content-info,
 html.dark .card,
 html.dark footer,
 html.dark .lugarDeatial,
-html.dark nav,
-htnl.dark .cantLugares {
+htnl.dark .cantLugares,
+html.dark .header {
   background-color: #3f3f3f;
   color: white;
 }
@@ -72,6 +72,6 @@ html.dark .cantLugares {
 }
 
 html.light footer,
-html.light nav {
+html.light .header {
   background-color: #212529;
 }

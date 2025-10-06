@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Portada } from "./components/portada";
 import { CardCategoria, Categoria } from "./components/categorias";

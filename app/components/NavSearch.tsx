@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
 
 export default function NavSearch() {
   const [text, setText] = useState("");
@@ -10,7 +9,7 @@ export default function NavSearch() {
 
   useEffect(() => {
     route.push(`lugares?tipo=${text}`);
-  }, [text]);
+  }, [text, route]);
 
   return (
     <nav className="bg-secondary">

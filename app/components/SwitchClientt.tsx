@@ -7,6 +7,7 @@ export function SwitchClient() {
   const { theme, setTheme } = useTheme();
   const [icono, setIcono] = useState("");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setTheme("light");
     setIcono("bi bi-brightness-high-fill");

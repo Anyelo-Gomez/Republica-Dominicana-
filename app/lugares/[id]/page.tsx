@@ -1,5 +1,5 @@
 async function getLugar(id: string) {
-  const res = await fetch(`http://localhost:4000/lugares?id=${id}`);
+  const res = await fetch(`${process.env.DB_HOST}lugares?id=${id}`);
   return res.json();
 }
 
